@@ -885,7 +885,7 @@ static int ideapad_dytc_profile_init(struct ideapad_private *priv)
 		return -ENODEV;
 
 	dytc_version = (output >> DYTC_QUERY_REV_BIT) & 0xF;
-	if (dytc_version < 5)
+	if (dytc_version < 3)
 		return -ENODEV;
 
 	priv->dytc = kzalloc(sizeof(*priv->dytc), GFP_KERNEL);
